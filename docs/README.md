@@ -6,6 +6,7 @@
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default preset: https://github.com/ss-o/renovate-config/blob/main/default.json",
   "extends": ["github>ss-o/renovate-config"]
 }
 ```

@@ -44,7 +44,7 @@
     },
     {
       "matchDepTypes": ["optionalDependencies"],
-      'groupSlug": "optional-dependencies",
+      "groupSlug": "optional-dependencies",
       "automerge": true
     },
     {

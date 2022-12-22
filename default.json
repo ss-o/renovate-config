@@ -44,17 +44,17 @@
     },
     {
       "matchDepTypes": ["optionalDependencies"],
-      'groupSlug": "optional-dependencies"
+      'groupSlug": "optional-dependencies",
       "automerge": true
     },
     {
       "matchDepTypes": ["devDependencies"],
-      "groupSlug": "dev-dependencies"
+      "groupSlug": "dev-dependencies",
       "automerge": true
     },
     {
       "matchDepTypes": ["peerDependencies"],
-      "groupSlug": "peer-dependencies"
+      "groupSlug": "peer-dependencies",
       "automerge": true
     },
     {

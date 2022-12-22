@@ -32,9 +32,7 @@
   "lockFileMaintenance": {
     "commitBody": "[skip CI]",
     "automerge": true,
-    "extends": [
-      "group:all"
-    ]  
+    "extends": ["group:all"]
   },
   "labels": ["dependencies"],
   "packageRules": [
@@ -74,12 +72,12 @@
     },
     {
       "groupName": "Font Awesome",
-      "groupSlug": "fontawesome-packages",      
+      "groupSlug": "fontawesome-packages",
       "matchPackagePrefixes": ["@fontawesome/"]
     },
     {
       "matchPackagePrefixes": ["@types/"],
       "automerge": true
-    }    
+    }
   ]
 }

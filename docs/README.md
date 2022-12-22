@@ -2,7 +2,6 @@
 
 ## [Default preset](https://github.com/ss-o/renovate-config/blob/main/default.json)
 
-
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",

@@ -73,7 +73,7 @@
     {
       "groupName": "Font Awesome",
       "groupSlug": "fontawesome-packages",
-      "matchPackagePrefixes": ["@fontawesome/"]
+      "matchPackagePrefixes": ["@fortawesome/"]
     },
     {
       "matchPackagePrefixes": ["@types/"],

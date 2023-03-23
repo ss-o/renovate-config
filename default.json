@@ -5,35 +5,32 @@
     "config:base",
     ":dependencyDashboard",
     ":semanticPrefixFixDepsChoreOthers",
+    ":separateMultipleMajorReleases",
+    ":enableVulnerabilityAlerts",
     ":ignoreModulesAndTests",
     ":autodetectPinVersions",
-    ":prHourlyLimit2",
+    ":preserveSemverRanges",
     ":prConcurrentLimit10",
+    ":automergeLinters",
+    ":prHourlyLimit2",
+    ":automergeMinor",
+    ":automergePatch",
+    ":automergeTypes",
     ":gitSignOff",
-    "group:monorepos",
+    ":pinSkipCi",
     "group:recommended",
+    "group:monorepos",
     "workarounds:all"
   ],
+  "dependencyDashboardTitle": "📊 Dependency Dashboard",
   "dependencyDashboardApproval": true,
   "dependencyDashboardAutoclose": true,
   "assigneesFromCodeOwners": true,
-  "commitBody": "Signed-off-by: {{{gitAuthor}}}",
-  "groupName": "All dependencies",
-  "groupSlug": "all",
-  "separateMajorMinor": true,
-  "separateMinorPatch": true,
-  "patch": {
-    "automerge": true
-  },
-  "pin": {
-    "commitBody": "[skip CI]",
-    "automerge": true
-  },
-  "lockFileMaintenance": {
-    "commitBody": "[skip CI]",
-    "automerge": true,
-    "extends": ["group:all"]
-  },
+  "osvVulnerabilityAlerts": true,
+  "platformCommit": true,
+  "postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"],
+  "commitBodyTable": true,
+  "automergeType": "pr",
   "labels": ["dependencies"],
   "packageRules": [
     {
@@ -54,26 +51,6 @@
       "matchDepTypes": ["peerDependencies"],
       "groupSlug": "peer-dependencies",
       "automerge": true
-    },
-    {
-      "groupName": "Eslint",
-      "groupSlug": "eslint-packages",
-      "matchPackagePatterns": ["^eslint"]
-    },
-    {
-      "groupName": "Stylelint",
-      "groupSlug": "stylelint-packages",
-      "matchPackagePatterns": ["^stylelint"]
-    },
-    {
-      "groupName": "Docusaurus",
-      "groupSlug": "docusaurus-packages",
-      "matchPackagePrefixes": ["@docusaurus/"]
-    },
-    {
-      "groupName": "Font Awesome",
-      "groupSlug": "fontawesome-packages",
-      "matchPackagePrefixes": ["@fortawesome/"]
     },
     {
       "matchPackagePrefixes": ["@types/"],

@@ -17,10 +17,8 @@
     ":automergePatch",
     ":automergeTypes",
     ":gitSignOff",
-    ":pinSkipCi",
     "group:recommended",
     "group:monorepos",
-    "workarounds:all"
   ],
   "dependencyDashboardTitle": "📊 Dependency Dashboard",
   "dependencyDashboardApproval": true,
@@ -28,9 +26,9 @@
   "assigneesFromCodeOwners": true,
   "osvVulnerabilityAlerts": true,
   "platformCommit": true,
-  "postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"],
   "commitBodyTable": true,
   "automergeType": "pr",
+  "postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"],
   "labels": ["dependencies"],
   "packageRules": [
     {
@@ -46,6 +44,7 @@
       "matchDepTypes": ["devDependencies"],
       "groupSlug": "dev-dependencies",
       "automerge": true
+      "groupName": "devDependencies (non-major)",
     },
     {
       "matchDepTypes": ["peerDependencies"],

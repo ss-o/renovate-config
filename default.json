@@ -18,7 +18,7 @@
     ":automergeTypes",
     ":gitSignOff",
     "group:recommended",
-    "group:monorepos",
+    "group:monorepos"
   ],
   "dependencyDashboardTitle": "📊 Dependency Dashboard",
   "dependencyDashboardApproval": true,
@@ -43,8 +43,8 @@
     {
       "matchDepTypes": ["devDependencies"],
       "groupSlug": "dev-dependencies",
-      "automerge": true
-      "groupName": "devDependencies (non-major)",
+      "automerge": true,
+      "groupName": "devDependencies (non-major)"
     },
     {
       "matchDepTypes": ["peerDependencies"],

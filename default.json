@@ -17,5 +17,4 @@
   },  
   "postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"],
   "labels": ["dependencies"]
-  ]
 }

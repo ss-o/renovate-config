@@ -1,24 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Shareable configuration for automated dependency updates",
-  "extends": [
-    "config:base",
-    ":dependencyDashboard",
-    ":separateMultipleMajorReleases",
-    ":enableVulnerabilityAlerts",
-    ":autodetectPinVersions",
-    ":preserveSemverRanges",
-    ":prConcurrentLimit10",
-    ":prHourlyLimit2",
-    ":automergeMinor",
-    ":automergePatch",
-    ":automergeTypes",
-    ":gitSignOff",
-    ":automergeLinters",
-    ":automergeMinor",
-    ":automergeTypes",
-    ":automergeDigest"
-  ],
+  "extends": ["config:recommended", ":gitSignOff"],
   "dependencyDashboardTitle": "📊 Dependency Dashboard",
   "dependencyDashboardApproval": true,
   "dependencyDashboardAutoclose": true,
@@ -26,25 +9,13 @@
   "osvVulnerabilityAlerts": true,
   "platformCommit": true,
   "commitBodyTable": true,
-  "automergeType": "pr",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "automergeType": "pr",
+    "platformAutomerge": false
+  },  
   "postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"],
-  "labels": ["dependencies"],
-  "packageRules": [
-    {
-      "matchDepTypes": ["optionalDependencies"],
-      "groupSlug": "optional-dependencies",
-      "automerge": true
-    },
-    {
-      "matchDepTypes": ["devDependencies"],
-      "groupSlug": "dev-dependencies",
-      "automerge": true,
-      "groupName": "devDependencies (non-major)"
-    },
-    {
-      "matchDepTypes": ["peerDependencies"],
-      "groupSlug": "peer-dependencies",
-      "automerge": true
-    }
+  "labels": ["dependencies"]
   ]
 }

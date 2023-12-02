@@ -1,7 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Shareable configuration for automated dependency updates",
-  "extends": ["config:recommended", ":gitSignOff"],
+  "extends": [
+    "config:best-practices",
+    ":automergePatch",
+    ":automergeTypes",
+    "packages:eslint",
+    "packages:react",
+    "packages:stylelint",
+    "replacements:all",
+    "security:openssf-scorecard",
+    "workarounds:all",
+    ":semanticCommits",
+    ":gitSignOff"
+  ],
   "dependencyDashboardTitle": "📊 Dependency Dashboard",
   "dependencyDashboardApproval": true,
   "dependencyDashboardAutoclose": true,
@@ -15,6 +27,5 @@
     "automergeType": "pr",
     "platformAutomerge": false
   },
-  "postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"],
-  "labels": ["dependencies"]
+  "postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"]
 }

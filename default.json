@@ -3,8 +3,10 @@
   "description": "Shareable configuration for automated dependency updates",
   "extends": [
     "config:best-practices",
+    ":automergeLinters",
     ":automergePatch",
     ":automergeTypes",
+    ":automergeMinor",
     "packages:eslint",
     "packages:react",
     "packages:stylelint",

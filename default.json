@@ -24,7 +24,7 @@
   "dependencyDashboardApproval": true,
   "dependencyDashboardAutoclose": true,
   "dependencyDashboardHeader": "",
-  "dependencyDashboardFooter": "",  
+  "dependencyDashboardFooter": "",
   "assigneesFromCodeOwners": true,
   "lockFileMaintenance": {
     "enabled": true,

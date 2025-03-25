@@ -1,29 +1,37 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Shareable configuration for automated dependency updates",
+  "description": "Organization level configuration for automated dependency updates",
   "extends": [
     "config:best-practices",
-    ":maintainLockFilesMonthly",    
-    ":preserveSemverRanges",    
-    "docker:pinDigests",
-    ":semanticCommits",
-    ":configMigration",
+    ":maintainLockFilesMonthly",
+    ":preserveSemverRanges",
     ":automergeLinters",
     ":automergePatch",
     ":automergeTypes",
     ":automergeMinor",
-    ":gitSignOff"
+    ":semanticCommits",
+    ":rebaseStalePrs",
+    ":configMigration",
+    "docker:pinDigests",
+    "group:monorepos",
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all",
+    ":gitSignOff",
+    ":pinSkipCi"
   ],
   "dependencyDashboardTitle": "📊 Dependency Dashboard",
   "dependencyDashboardApproval": true,
-  "dependencyDashboardAutoclose": true,  
+  "dependencyDashboardAutoclose": true,
+  "dependencyDashboardHeader": "",
+  "dependencyDashboardFooter": "",  
   "assigneesFromCodeOwners": true,
-  "osvVulnerabilityAlerts": true,
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
     "automergeType": "pr",
     "platformAutomerge": false
   },
-  "postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"]
+  "postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"],
+  "labels": ["dependencies "]
 }
